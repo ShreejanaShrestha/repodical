@@ -1,9 +1,10 @@
 import React,  {Component} from 'react';
+import {link} from 'React-router-dom';
 //material ui component
-
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+
 import Account from './Account';
 class Header extends Component{
 	appStyle = {
@@ -30,7 +31,7 @@ class Header extends Component{
 				<Drawer open={this.state.sidebarOpen}
 					docked= {false}
 					onRequestChange={() => this.toggleSidebar()} >
-					<MenuItem> Home </MenuItem>
+					<MenuItem> <Link to = '/Dashboard'> Home </MenuItem>
 					<MenuItem> History </MenuItem>
 					<MenuItem> Things to do </MenuItem>
 				</Drawer>
